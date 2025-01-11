@@ -1,16 +1,11 @@
+import tailwindScrollbarHide from 'tailwind-scrollbar-hide';
+import tailwindLineClamp from '@tailwindcss/line-clamp';
+
 /** @type {import('tailwindcss').Config} */
 export default {
-  darkMode: 'class', // or 'media' if you want to follow user's system preference
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
-    extend: {
-      borderRadius: {
-        '4.75rem': '4.75rem',
-      },
-    },
+    extend: {},
   },
-  plugins: [require('tailwind-scrollbar-hide','@tailwindcss/line-clamp')],
-}
+  plugins: [tailwindScrollbarHide, tailwindLineClamp],
+};
